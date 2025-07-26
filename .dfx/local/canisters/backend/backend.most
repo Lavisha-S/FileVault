@@ -1,0 +1,19 @@
+// Version: 1.0.0
+type FileChunk__1047546309 = {chunk : Blob; index : Nat};
+type File__72265355 =
+  {
+    chunks : [FileChunk__1047546309];
+    fileType : Text;
+    name : Text;
+    totalSize : Nat
+  };
+type Map__714078229<K, V> = Map__741714040<K, V>;
+type Map__741714040<K, V> =
+  [var ?(keys : [var ?K], values : [var ?V], indexes : [var Nat],
+         bounds : [var Nat32])];
+type UserFiles__800982266 = Map__714078229<Text, File__72265355>;
+actor {
+  stable var files :
+    [var ?(keys : [var ?Principal], values : [var ?UserFiles__800982266],
+           indexes : [var Nat], bounds : [var Nat32])]
+};
